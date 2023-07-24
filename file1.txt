@@ -1,4 +1,5 @@
-Hello there 
+wello there 
+
 
 undo commited changes....
 Line
@@ -6,10 +7,17 @@ added line to check revert. **
 Line 
 bug is fixed by adding sime code
 
-fast forward **
+Undo commited changes....
  
-added line to check revert...
+Added line to check revert. **
 
-bug is fixed by adding sime code....
+ 
+Fast forward **
+ 
+Added line to check revert...
+
+Bug is fixed by adding sime code....
 ...
-fast forward
+Fast forward
+
+New Line for CR2.
