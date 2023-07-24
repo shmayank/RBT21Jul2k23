@@ -1,7 +1,7 @@
 Hello there 
 
 undo commited changes
-<<<<<<< HEAD
+
 line added again
 
 added line to check revert
