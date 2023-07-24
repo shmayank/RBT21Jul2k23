@@ -5,3 +5,5 @@ undo commited changes
 added line to check revert
 
 bug is fixed by adding sime code
+
+fast forward
