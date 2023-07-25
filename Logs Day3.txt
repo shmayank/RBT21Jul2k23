@@ -1,0 +1,574 @@
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (CR2|REB
+$ git status
+starting fsmonitor-daemon in 'C:/Users/mayank_sharma3/Desktop/Gi
+On branch master
+Last command done (1 command done):
+   pick c8dc497 CR2: File updated for rebase with conflict
+No commands remaining.
+You are currently editing a commit while rebasing branch 'CR2' o
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your
+
+nothing to commit, working tree clean
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (CR2|REB
+$ git ^C
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (CR2|REB
+$
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (CR2|REB
+$ git rebase --continue
+Successfully rebased and updated refs/heads/CR2.
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (CR2)
+$ git checkout master
+Switched to branch 'master'
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git log --oneline --decorate --graph
+*   8c96b63 (HEAD -> master, CR2) WI6: resolved conflict again wh master
+|\
+| * c8dc497 CR2: File updated for rebase with conflict
+* | e37254e WI5: File updated team member for rebase with confli
+|/
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e WI1: file is adde
+...skipping...
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e WI1: file is adde
+(END)
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e WI1: file is adde
+(END)
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e WI1: file is adde
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git tag V1.0 0999d6e
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git tag
+V1.0
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git log --oneline --decorate --graph
+*   8c96b63 (HEAD -> master, CR2) WI6: resolved conflict again werging with master
+|\
+| * c8dc497 CR2: File updated for rebase with conflict
+* | e37254e WI5: File updated team member for rebase with confli
+|/
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e (tag: V1.0) WI1: file is adde
+(END)
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e (tag: V1.0) WI1: file is adde
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e (tag: V1.0) WI1: file is adde
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working dir
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a"
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git stash
+Saved working directory and index state WIP on master: 8c96b63 WI6: resolved conflict again while merging with master
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git stash list
+stash@{0}: WIP on master: 8c96b63 WI6: resolved conflict again while merging with master
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git stash pop
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git remote add origin https://github.com/shmayank/RBT21Jul2k23.git
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git remote
+origin
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git branch -d CR2
+Deleted branch CR2 (was 8c96b63).
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git log --oneline --decorate --graph
+*   8c96b63 (HEAD -> master) WI6: resolved conflict again while merging with master
+|\
+| * c8dc497 CR2: File updated for rebase with conflict
+* | e37254e WI5: File updated team member for rebase with conflict
+|/
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e (tag: V1.0) WI1: file is adde
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (master)
+$ git branch -M main
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git push -u origin main
+remote: Permission to shmayank/RBT21Jul2k23.git denied to shmayank.
+fatal: unable to access 'https://github.com/shmayank/RBT21Jul2k23.git/': The requested URL returned error: 403
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git branch -M main
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git push -u origin main
+Enumerating objects: 61, done.
+Counting objects: 100% (61/61), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (56/56), done.
+Writing objects: 100% (61/61), 5.67 KiB | 187.00 KiB/s, done.
+Total 61 (delta 17), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+To https://github.com/shmayank/RBT21Jul2k23.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git commit -am "WI6: added some changes after configure remote"
+[main 28d1077] WI6: added some changes after configure remote
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git push -u origin main
+To https://github.com/shmayank/RBT21Jul2k23.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/shmayank/RBT21Jul2k23.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 713 bytes | 59.00 KiB/s, done.
+From https://github.com/shmayank/RBT21Jul2k23
+   8c96b63..b9566cb  main       -> origin/main
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git pull
+Auto-merging file1.txt
+CONFLICT (content): Merge conflict in file1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main|MERGING)
+$ git commit -am "WI8: resolved conflicts after pull from remote"
+[main 4e17dcb] WI8: resolved conflicts after pull from remote
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git push -u origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 658 bytes | 219.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/shmayank/RBT21Jul2k23.git
+   b9566cb..4e17dcb  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git branch
+* main
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git branch x
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git branch
+* main
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git checkout y
+error: pathspec 'y' did not match any file(s) known to git
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git checkout CR2
+error: pathspec 'CR2' did not match any file(s) known to git
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ giit checkout -b Bug123
+bash: giit: command not found
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git checkout -b Bug123
+Switched to a new branch 'Bug123'
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (Bug123)
+$ git branch
+* Bug123
+  main
+  x
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (Bug123)
+$ git branch -d x
+Deleted branch x (was 4e17dcb).
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (Bug123)
+$ git branch -d bug123
+Deleted branch bug123 (was 4e17dcb).
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (Bug123)
+$ git branch
+  main
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (Bug123)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (Bug123)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git log --oneline --decorate --graph
+*   4e17dcb (HEAD -> main, origin/main) WI8: resolved conflicts after pull from remote
+|\
+| * b9566cb Updated file1.txt on remote
+* | 28d1077 WI6: added some changes after configure remote
+|/
+*   8c96b63 WI6: resolved conflict again while merging with master
+|\
+| * c8dc497 CR2: File updated for rebase with conflict
+* | e37254e WI5: File updated team member for rebase with conflict
+|/
+*   1f30cb1 resolved conflicts
+|\
+| * c7bc380 added something by team menmebr
+| * 71a48a9 added something
+* | f6eac75 CR1: merge resolved
+|\|
+| * c5e3c4e Bug123: check 3 way merge
+* | 1125f0e CR1: updated by team member
+|/
+* 6217107 B1 fast forward
+*   bdddf0b Bug123: merge resolved
+|\
+| * 62d9e2e Bug123: added some text to fix the bug
+* | fdfafe7 WI5: added line to check rvert head
+|/
+* 8493121 WI5: added line to check rvert head
+* 42ec027 WI5: added line to check rvert head
+* de3e37e WI5: added line to check rvert head
+* b5690ae WI3: demo undo changes added extra line
+* 5073597 WI3: demo undo changes added extra line
+* 49f64e2 WI3: demo undo changes
+* 97f46c5 WI3: added filetobedelete
+* 0999d6e (tag: V1.0) WI1: file is adde
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ ^C
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git branch
+* main
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git ls-remote origin master
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git branch
+* main
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+mayank_sharma3@ARPGL002299 MINGW64 ~/Desktop/Git Folder (main)
+$
