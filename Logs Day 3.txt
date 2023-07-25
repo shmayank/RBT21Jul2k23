@@ -1,0 +1,582 @@
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* 07adf08 (HEAD -> master, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git tag V1.0 f30d6cb
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git tag V1.1 3a4edb4
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git tag V1.2 b81a7ce
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git tag V1.3
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* 07adf08 (HEAD -> master, tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git tag
+V1.0
+V1.1
+V1.2
+V1.3
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout V1.1
+Note: switching to 'V1.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3a4edb4 WI3:File deleted.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 ((V1.1))
+$ git checkout master
+Previous HEAD position was 3a4edb4 WI3:File deleted.
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* 07adf08 (HEAD -> master, tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git stash
+Saved working directory and index state WIP on master: 07adf08 CR2 and WI5 resolved in File1
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git stash list
+stash@{0}: WIP on master: 07adf08 CR2 and WI5 resolved in File1
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git stash pop
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (f35752ca7b8e686dffd984f87279c5a98cdc0356)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote add orign https://github.com/RenukaMKulkarni/RBT21Jul23.git
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote
+orign
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote add origin https://github.com/RenukaMKulkarni/RBT21Jul23.git
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote
+origin
+orign
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote remove Orign
+error: No such remote: 'Orign'
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote remove orign
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote
+origin
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git remote -v
+origin  https://github.com/RenukaMKulkarni/RBT21Jul23.git (fetch)
+origin  https://github.com/RenukaMKulkarni/RBT21Jul23.git (push)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch -M main
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git push -u origin main
+Enumerating objects: 43, done.
+Counting objects: 100% (43/43), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (43/43), 4.20 KiB | 430.00 KiB/s, done.
+Total 43 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), done.
+To https://github.com/RenukaMKulkarni/RBT21Jul23.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 07adf08 (HEAD -> main, tag: V1.3, origin/main, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git commit -m "WIP:Completed!"
+[main 6471077] WIP:Completed!
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 6471077 (HEAD -> main) WIP:Completed!
+* 07adf08 (tag: V1.3, origin/main, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 122.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RenukaMKulkarni/RBT21Jul23.git
+   07adf08..6471077  main -> main
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 6471077 (HEAD -> main, origin/main) WIP:Completed!
+* 07adf08 (tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 6471077 (HEAD -> main, origin/main) WIP:Completed!
+* 07adf08 (tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 745 bytes | 67.00 KiB/s, done.
+From https://github.com/RenukaMKulkarni/RBT21Jul23
+   6471077..8ddbfdb  main       -> origin/main
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 6471077 (HEAD -> main) WIP:Completed!
+* 07adf08 (tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git pull
+Updating 6471077..8ddbfdb
+Fast-forward
+ File1.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 8ddbfdb (HEAD -> main, origin/main) Team Member remotely updated the file.
+* 6471077 WIP:Completed!
+* 07adf08 (tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git add .
+git
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git commit -m "I added line to verify remote conflicts"
+[main 3e13f24] I added line to verify remote conflicts
+ 1 file changed, 2 insertions(+)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 3e13f24 (HEAD -> main) I added line to verify remote conflicts
+* 8ddbfdb (origin/main) Team Member remotely updated the file.
+* 6471077 WIP:Completed!
+* 07adf08 (tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 766 bytes | 69.00 KiB/s, done.
+From https://github.com/RenukaMKulkarni/RBT21Jul23
+   8ddbfdb..483ecc3  main       -> origin/main
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+* 3e13f24 (HEAD -> main) I added line to verify remote conflicts
+* 8ddbfdb Team Member remotely updated the file.
+* 6471077 WIP:Completed!
+* 07adf08 (tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git pull
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main|MERGING)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main|MERGING)
+$ git commit -m "Remote conflicts merged."
+[main 2c7b5a5] Remote conflicts merged.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 673 bytes | 336.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/RenukaMKulkarni/RBT21Jul23.git
+   483ecc3..2c7b5a5  main -> main
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git log --oneline --decorate --graph
+*   2c7b5a5 (HEAD -> main, origin/main) Remote conflicts merged.
+|\
+| * 483ecc3 Team member added a line to check conflict.
+* | 3e13f24 I added line to verify remote conflicts
+|/
+* 8ddbfdb Team Member remotely updated the file.
+* 6471077 WIP:Completed!
+* 07adf08 (tag: V1.3, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce (tag: V1.2) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 (tag: V1.1) WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb (tag: V1.0) WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$ git clone --help
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (main)
+$
+****************************************************************************************
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/MyNewProject
+$ git remote
+fatal: not a git repository (or any of the parent directories): .git
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/MyNewProject
+$ git remote add origin https://github.com/RenukaMKulkarni/CloneRepoDemo.git
+fatal: not a git repository (or any of the parent directories): .git
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/MyNewProject
+$ git remote
+fatal: not a git repository (or any of the parent directories): .git
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/MyNewProject
+$ git clone https://github.com/RenukaMKulkarni/CloneRepoDemo.git
+Cloning into 'CloneRepoDemo'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+Resolving deltas: 100% (1/1), done.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/MyNewProject
+$ cd CloneRepoDemo/
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/MyNewProject/CloneRepoDemo (main)
+$ git log --oneline --decorate --graph
+* 979e5b4 (HEAD -> main, origin/main, origin/HEAD) Created Hello World
+* ca04d1c Initial commit
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/MyNewProject/CloneRepoDemo (main)
+$ 
+

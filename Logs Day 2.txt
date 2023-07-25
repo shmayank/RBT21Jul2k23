@@ -1,0 +1,821 @@
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline
+38d154e (HEAD -> master) WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git commit -m "WI2: file1 updated."
+[master be126cc] WI2: file1 updated.
+ 1 file changed, 1 insertion(+)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git commit -m "WI3: Added FileTobeDeleted Later."
+[master 47701c9] WI3: Added FileTobeDeleted Later.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 FileToBeDelated.txt
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git rm FileToBeDelated.txt
+rm 'FileToBeDelated.txt'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    FileToBeDelated.txt
+
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git commit -m "WI3:File deleted."
+[master 3a4edb4] WI3:File deleted.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 FileToBeDelated.txt
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline
+3a4edb4 (HEAD -> master) WI3:File deleted.
+47701c9 WI3: Added FileTobeDeleted Later.
+be126cc WI2: file1 updated.
+38d154e WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout 47701c9
+Note: switching to '47701c9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 47701c9 WI3: Added FileTobeDeleted Later.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 ((47701c9...))
+$ git checkout master
+Previous HEAD position was 47701c9 WI3: Added FileTobeDeleted Later.
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline
+3a4edb4 (HEAD -> master) WI3:File deleted.
+47701c9 WI3: Added FileTobeDeleted Later.
+be126cc WI2: file1 updated.
+38d154e WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout -- File1.txt
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git commit -am "WI4:Demo undo changes."
+[master 1c18ba8] WI4:Demo undo changes.
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git commit -am "WI4:Demo undo changes, added 1 extra line."
+[master dac5024] WI4:Demo undo changes, added 1 extra line.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline
+dac5024 (HEAD -> master) WI4:Demo undo changes, added 1 extra line.
+1c18ba8 WI4:Demo undo changes.
+3a4edb4 WI3:File deleted.
+47701c9 WI3: Added FileTobeDeleted Later.
+be126cc WI2: file1 updated.
+38d154e WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git revert 1c18ba8
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+error: could not revert 1c18ba8... WI4:Demo undo changes.
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|REVERTING)
+$ git status
+On branch master
+You are currently reverting commit 1c18ba8.
+  (fix conflicts and run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|REVERTING)
+$ git revert --continue\
+>
+.git/           A.jar           Logs Day 1.txt  Logs Day 3.txt
+.gitignore      File1.txt       Logs Day 2.txt
+> q
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --reference           use the 'reference' format to refer to commits
+
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|REVERTING)
+$ git revert --continue
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       File1.txt
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|REVERTING)
+$ git status
+On branch master
+You are currently reverting commit 1c18ba8.
+  (fix conflicts and run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|REVERTING)
+$ git revert --continue
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       File1.txt
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|REVERTING)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|REVERTING)
+$ git revert --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file D:/RBTs/RBTGit21Jul23/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file D:/RBTs/RBTGit21Jul23/.git/COMMIT_EDITMSG to Unix format...
+[master 9b7f6e3] Revert "WI4:Demo undo changes." done.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline
+9b7f6e3 (HEAD -> master) Revert "WI4:Demo undo changes." done.
+dac5024 WI4:Demo undo changes, added 1 extra line.
+1c18ba8 WI4:Demo undo changes.
+3a4edb4 WI3:File deleted.
+47701c9 WI3: Added FileTobeDeleted Later.
+be126cc WI2: file1 updated.
+38d154e WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git revert --help
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git reset --help
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git reset --hard dac5024
+HEAD is now at dac5024 WI4:Demo undo changes, added 1 extra line.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline
+dac5024 (HEAD -> master) WI4:Demo undo changes, added 1 extra line.
+1c18ba8 WI4:Demo undo changes.
+3a4edb4 WI3:File deleted.
+47701c9 WI3: Added FileTobeDeleted Later.
+be126cc WI2: file1 updated.
+38d154e WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch
+* master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch Bug123
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch
+  Bug123
+* master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout Bug123
+Switched to branch 'Bug123'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git log --oneline
+dac5024 (HEAD -> Bug123, master) WI4:Demo undo changes, added 1 extra line.
+1c18ba8 WI4:Demo undo changes.
+3a4edb4 WI3:File deleted.
+47701c9 WI3: Added FileTobeDeleted Later.
+be126cc WI2: file1 updated.
+38d154e WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git status
+On branch Bug123
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git commit -m"Bug123: added a function to the fix the bug."
+[Bug123 b81a7ce] Bug123: added a function to the fix the bug.
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git status
+On branch Bug123
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git log --oneline
+b81a7ce (HEAD -> Bug123) Bug123: added a function to the fix the bug.
+dac5024 (master) WI4:Demo undo changes, added 1 extra line.
+1c18ba8 WI4:Demo undo changes.
+3a4edb4 WI3:File deleted.
+47701c9 WI3: Added FileTobeDeleted Later.
+be126cc WI2: file1 updated.
+38d154e WI2:File1 updated with Day2 & 3 details.
+e1dbcd6 Config: Added gitIgnore file.
+a2d3d07 WI1: File1 updated with Day1 session details.
+f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git log --oneline --decorate --graph
+* b81a7ce (HEAD -> Bug123) Bug123: added a function to the fix the bug.
+* dac5024 (master) WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug123)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* dac5024 (HEAD -> master) WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git merge Bug123
+Updating dac5024..b81a7ce
+Fast-forward
+ File1.txt | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch -d Bug123
+Deleted branch Bug123 (was b81a7ce).
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch
+* master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* b81a7ce (HEAD -> master) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout -- File1.txt
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* b81a7ce (HEAD -> master) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout -b Bug456
+Switched to a new branch 'Bug456'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug456)
+$ git commit -am "Bug456: File1 updated, added fullstops to study 3 way merge."
+[Bug456 0bd4819] Bug456: File1 updated, added fullstops to study 3 way merge.
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug456)
+$ git status
+On branch Bug456
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug456)
+$ git log --oneline --decorate --graph
+* 0bd4819 (HEAD -> Bug456) Bug456: File1 updated, added fullstops to study 3 way merge.
+* b81a7ce (master) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (Bug456)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* b81a7ce (HEAD -> master) Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git commit -m "CR1: File1 updated by team member."
+[master 762d3e6] CR1: File1 updated by team member.
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* 762d3e6 (HEAD -> master) CR1: File1 updated by team member.
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git merge Bug456
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|MERGING)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master|MERGING)
+$ git commit -m "Conflict: resolved in file1 for CR1 & Bug456."
+[master c630ff9] Conflict: resolved in file1 for CR1 & Bug456.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+*   c630ff9 (HEAD -> master) Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 (Bug456) Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch -d Bug456
+Deleted branch Bug456 (was 0bd4819).
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch
+* master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git branch
+* master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+*   c630ff9 (HEAD -> master) Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout -b CR2
+Switched to a new branch 'CR2'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git status
+On branch CR2
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git log --oneline --decorate --graph
+*   c630ff9 (HEAD -> CR2, master) Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git commit -am "CR2:File updated for rebase with conflict."
+[CR2 2393b6d] CR2:File updated for rebase with conflict.
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git status
+On branch CR2
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git log --oneline --decorate --graph
+* 2393b6d (HEAD -> CR2) CR2:File updated for rebase with conflict.
+*   c630ff9 (master) Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git commit -am "WI5:File updated by team member for rebase with conflict."
+[master 869a9e8] WI5:File updated by team member for rebase with conflict.
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git checkout CR2
+Switched to branch 'CR2'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git rebase master
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+error: could not apply 2393b6d... CR2:File updated for rebase with conflict.
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 2393b6d... CR2:File updated for rebase with conflict.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 869a9e8
+Last command done (1 command done):
+   pick 2393b6d CR2:File updated for rebase with conflict.
+No commands remaining.
+You are currently rebasing branch 'CR2' on '869a9e8'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2|REBASE 1/1)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2|REBASE 1/1)
+$ git rebase --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file D:/RBTs/RBTGit21Jul23/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file D:/RBTs/RBTGit21Jul23/.git/COMMIT_EDITMSG to Unix format...
+[detached HEAD 07adf08] CR2 and WI5 resolved in File1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully rebased and updated refs/heads/CR2.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git status
+On branch CR2
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git log --oneline --decorate --graph
+* 07adf08 (HEAD -> CR2) CR2 and WI5 resolved in File1
+* 869a9e8 (master) WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (CR2)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* 869a9e8 (HEAD -> master) WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git merge CR2
+Updating 869a9e8..07adf08
+Fast-forward
+ File1.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ git log --oneline --decorate --graph
+* 07adf08 (HEAD -> master, CR2) CR2 and WI5 resolved in File1
+* 869a9e8 WI5:File updated by team member for rebase with conflict.
+*   c630ff9 Conflict: resolved in file1 for CR1 & Bug456.
+|\
+| * 0bd4819 Bug456: File1 updated, added fullstops to study 3 way merge.
+* | 762d3e6 CR1: File1 updated by team member.
+|/
+* b81a7ce Bug123: added a function to the fix the bug.
+* dac5024 WI4:Demo undo changes, added 1 extra line.
+* 1c18ba8 WI4:Demo undo changes.
+* 3a4edb4 WI3:File deleted.
+* 47701c9 WI3: Added FileTobeDeleted Later.
+* be126cc WI2: file1 updated.
+* 38d154e WI2:File1 updated with Day2 & 3 details.
+* e1dbcd6 Config: Added gitIgnore file.
+* a2d3d07 WI1: File1 updated with Day1 session details.
+* f30d6cb WI1: File1 is added with Welcome message.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$ ^C
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/RBTGit21Jul23 (master)
+$
